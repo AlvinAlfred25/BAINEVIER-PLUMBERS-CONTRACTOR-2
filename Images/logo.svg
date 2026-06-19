@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 110" width="430" height="110">
+  <defs>
+    <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a5ea8"/>
+      <stop offset="1" stop-color="#052a40"/>
+    </linearGradient>
+  </defs>
+  <circle cx="55" cy="55" r="50" fill="url(#ringGrad)"/>
+  <circle cx="55" cy="55" r="50" fill="none" stroke="#c1703d" stroke-width="3"/>
+  <!-- water drop -->
+  <path d="M55 27 C68 45 76 56 76 66 a21 21 0 0 1-42 0 C34 56 42 45 55 27 Z"
+        fill="none" stroke="#ffffff" stroke-width="5" stroke-linejoin="round"/>
+  <!-- wrench accent crossing the drop -->
+  <path d="M37 70 L73 40" stroke="#c1703d" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="37" cy="70" r="7" fill="none" stroke="#c1703d" stroke-width="5"/>
+  <circle cx="73" cy="40" r="7" fill="none" stroke="#c1703d" stroke-width="5"/>
+  <text x="124" y="50" font-family="'Outfit','Segoe UI',Arial,sans-serif" font-size="30" font-weight="700" fill="#ffffff">BAINEVIER</text>
+  <text x="124" y="76" font-family="'Outfit','Segoe UI',Arial,sans-serif" font-size="15" font-weight="600" letter-spacing="1.2" fill="#c1703d">PLUMBERS &amp; CONTRACTORS</text>
+</svg>
