@@ -163,11 +163,22 @@ color: #fff; font-size: 1.5rem; font-weight: 700;
   padding: 14px 30px; border-radius: 999px; border: 2px solid transparent;
   cursor: pointer; text-decoration: none; transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), background 0.25s var(--ease);
 }
-.btn-primary { background: var(--copper); color: #fff; box-shadow: var(--shadow-sm); }
-.btn-primary:hover { background: var(--copper-dark); transform: translateY(-2px); box-shadow: var(--shadow-md); }
-.btn-ghost { background: transparent; border-color: rgba(255,255,255,0.55); color: #fff; }
+.btn-primary { background: var(--copper); color: white; box-shadow: var(green); }
+.btn-primary:hover { background: var(green); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.btn-ghost { background: transparent; border-color: rgba(169, 222, 165, 0.831); color:whitesmoke; }
 .btn-ghost:hover { background: rgba(255,255,255,0.12); transform: translateY(-2px); }
 .btn-block { width: 100%; }
+
+.btn-primarys {
+  background-color: rgb(20, 167, 20);
+  color: white;
+}
+
+.btn-primarys:hover {
+  background-color: rgb(20, 167, 28);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
 
 /* =========================================================
    Home Hero
@@ -272,7 +283,10 @@ color: #fff; font-size: 1.5rem; font-weight: 700;
   box-shadow: var(--shadow-sm); transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
   aspect-ratio: 4 / 3;
 }
-.hover-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.hover-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 0 2px var(--blue), 0 22px 44px rgba(10, 94, 168, 0.28);
+}
 .hover-card img { width: 100%; height: 100%; object-fit: cover; }
 .hover-card .overlay {
   position: absolute; top: 0; left: 0; right: 0; bottom: 0;
@@ -290,12 +304,24 @@ color: #fff; font-size: 1.5rem; font-weight: 700;
 .gallery figure {
   border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);
   cursor: zoom-in; position: relative;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
 }
 .gallery img { width: 100%; height: 200px; object-fit: cover; transition: transform 0.4s var(--ease); }
+.gallery figure:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 0 2px var(--blue), 0 18px 36px rgba(10, 94, 168, 0.28);
+}
 .gallery figure:hover img { transform: scale(1.06); }
 
 .before-after { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-.ba-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+.ba-card {
+  background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.ba-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 0 0 2px var(--blue), 0 22px 44px rgba(10, 94, 168, 0.28);
+}
 .ba-images { display: grid; grid-template-columns: 1fr 1fr; }
 .ba-images figure { position: relative; cursor: zoom-in; }
 .ba-images img { width: 100%; height: 280px; object-fit: cover; }
@@ -324,6 +350,11 @@ color: #fff; font-size: 1.5rem; font-weight: 700;
 .testimonial-card {
   background: var(--white); border-radius: var(--radius); padding: 28px;
   box-shadow: var(--shadow-sm); border-top: 3px solid var(--copper);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.testimonial-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 0 0 2px var(--blue), 0 22px 44px rgba(10, 94, 168, 0.28);
 }
 .testimonial-card .quote-mark { font-family: var(--font-display); font-size: 2.4rem; color: var(--copper); line-height: 1; opacity: 0.5; }
 .testimonial-card p { color: var(--ink); margin: 8px 0 14px; }
@@ -333,7 +364,14 @@ color: #fff; font-size: 1.5rem; font-weight: 700;
    About page extras
    ========================================================= */
 .value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; margin-top: 12px; }
-.value-card { background: var(--white); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow-sm); }
+.value-card {
+  background: var(--white); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow-sm);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.value-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 0 0 2px var(--blue), 0 22px 44px rgba(10, 94, 168, 0.28);
+}
 .value-card i { color: var(--copper); font-size: 1.5rem; margin-bottom: 10px; display: block; }
 
 /* =========================================================
@@ -376,6 +414,11 @@ color: #fff; font-size: 1.5rem; font-weight: 700;
 .contact-card {
   background: var(--white); border-radius: var(--radius); padding: 22px 24px;
   box-shadow: var(--shadow-sm); display: flex; gap: 14px; align-items: flex-start;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 0 2px var(--blue), 0 18px 36px rgba(10, 94, 168, 0.28);
 }
 .contact-card i { color: var(--copper); font-size: 1.25rem; margin-top: 3px; }
 .contact-card h3 { font-size: 1rem; margin-bottom: 4px; }
@@ -384,6 +427,18 @@ color: #fff; font-size: 1.5rem; font-weight: 700;
 
 .map-container { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
 .map-container iframe { width: 100%; height: 320px; border: 0; display: block; }
+
+.Green-Cl {
+  color: rgb(9, 237, 9); 
+}
+
+.Green-Cl-2 a {
+  color: rgb(6, 188, 36);
+}
+
+
+
+
 
 /* =========================================================
    Footer
@@ -407,6 +462,9 @@ footer.site-footer {
   display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
   font-size: 0.82rem; color: #7e94a6;
 }
+
+
+
 
 /* =========================================================
    WhatsApp floating button
