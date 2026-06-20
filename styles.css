@@ -375,6 +375,34 @@ color: #fff; font-size: 1.5rem; font-weight: 700;
 .value-card i { color: var(--copper); font-size: 1.5rem; margin-bottom: 10px; display: block; }
 
 /* =========================================================
+   Founder spotlight
+   ========================================================= */
+.founder-section {
+  display: grid; grid-template-columns: 320px 1fr; gap: 48px; align-items: center;
+}
+@media (max-width: 760px) { .founder-section { grid-template-columns: 1fr; } }
+.founder-photo {
+  position: relative; border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow-md); aspect-ratio: 4 / 4.6;
+}
+.founder-photo img { width: 100%; height: 100%; object-fit: cover; }
+.founder-text .eyebrow { display: block; }
+.founder-text h2 { margin-bottom: 4px; }
+.founder-title {
+  font-family: var(--font-display); font-weight: 600; color: var(--copper);
+  font-size: 1rem; margin-bottom: 16px; display: block;
+}
+.founder-text p { font-size: 1.02rem; margin-bottom: 14px; }
+.founder-signature {
+  font-family: var(--font-display); font-weight: 700; color: var(--navy);
+  font-size: 1.15rem; margin-top: 10px;
+}
+.founder-signature span {
+  display: block; font-family: var(--font-body); font-weight: 400; color: var(--slate);
+  font-size: 0.85rem; margin-top: 2px;
+}
+
+/* =========================================================
    Contact / Quote form
    ========================================================= */
 .contact-layout {
