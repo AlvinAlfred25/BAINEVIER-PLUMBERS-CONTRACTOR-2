@@ -122,8 +122,9 @@ p { color: var(--slate); }
 color: #fff; font-size: 1.5rem; font-weight: 700;
 }
 
+
 .logo-area { display: flex; align-items: center; }
-.logo-area img { height: 46px; width: auto; }
+.logo-area img { height: 60px; width: 140px; }
 
 .main-nav { display: flex; align-items: center; gap: 4px; }
 .main-nav a {
