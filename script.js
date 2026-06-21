@@ -234,6 +234,19 @@
         return;
       }
 
+      // Save the lead to the MySQL database (fire-and-forget). If XAMPP/MySQL
+      // isn't running or this fails for any reason, the WhatsApp hand-off
+      // below still goes ahead as normal so the customer is never blocked.
+      var dbData = new FormData();
+      dbData.append("name", name.value.trim());
+      dbData.append("phone", phone.value.trim());
+      dbData.append("date", date.value);
+      dbData.append("service", service.value);
+      dbData.append("message", message.value.trim());
+      fetch("contact_handler.php", { method: "POST", body: dbData }).catch(function () {
+        // Network/database issue — silently ignored, WhatsApp still works.
+      });
+
       var lines = [
         "New quote request — Bainevier Plumbers & Contractors",
         "Name: " + name.value.trim(),
@@ -265,5 +278,24 @@
         statusBox.appendChild(fallback);
       }
     });
+  }
+
+  /* ---------- Auth pages: show server-side error messages after redirect ---------- */
+  var authStatus = document.querySelector("[data-auth-status]");
+  if (authStatus) {
+    var params = new URLSearchParams(window.location.search);
+    var err = params.get("error");
+    if (err) {
+      var authMessages = {
+        missing: "Please fill in all required fields.",
+        email: "Please enter a valid email address.",
+        weak: "Password must be at least 6 characters.",
+        mismatch: "Passwords do not match.",
+        exists: "An account with that email already exists. Try logging in instead.",
+        invalid: "Incorrect email or password."
+      };
+      authStatus.textContent = authMessages[err] || "Something went wrong. Please try again.";
+      authStatus.classList.add("show", "error");
+    }
   }
 })();

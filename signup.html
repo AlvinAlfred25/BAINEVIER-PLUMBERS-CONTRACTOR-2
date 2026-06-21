@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Bainevier Plumbers &amp; Contractors</title>
+  <meta name="description" content="Create a free account with Bainevier Plumbers & Contractors.">
+  <link rel="icon" type="image/svg+xml" href="Images/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="main-header">
+    <a href="index.html" class="logo-area">
+      <img src="Images/Logo-2.jpg" alt="Bainevier Plumbers & Contractors logo" width="216" height="55">
+    </a>
+    <h1>Bainevier Plumbers & Contractors</h1>
+    <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about_us.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="contact_us.html">Contact Us</a>
+      <a href="login.html" class="nav-login">Login</a>
+      <a href="signup.html" class="nav-signup">Sign Up</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="page-banner">
+      <span class="eyebrow">Join Us</span>
+      <h1>Create Your Account</h1>
+      <p>Sign up to save your details and request quotes faster next time.</p>
+    </div>
+
+    <section class="section">
+      <div class="container auth-wrap">
+        <form class="quote-form reveal" action="signup.php" method="POST" novalidate>
+          <h2 style="margin-bottom:18px;">Sign Up</h2>
+
+          <div class="field">
+            <label for="full_name">Full Name</label>
+            <input type="text" id="full_name" name="full_name" placeholder="e.g. John Mukasa" required>
+            <p class="error-msg">Please enter your name.</p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            <p class="error-msg">Please enter a valid email address.</p>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="07XX XXX XXX" required>
+            <p class="error-msg">Please enter a valid phone number.</p>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="At least 6 characters" minlength="6" required>
+              <p class="error-msg">Password must be at least 6 characters.</p>
+            </div>
+            <div class="field">
+              <label for="confirm_password">Confirm Password</label>
+              <input type="password" id="confirm_password" name="confirm_password" placeholder="Re-enter password" minlength="6" required>
+              <p class="error-msg">Passwords do not match.</p>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primarys btn-block">
+            <i class="fa-solid fa-user-plus" aria-hidden="true"></i> Create Account
+          </button>
+
+          <div class="form-status" data-auth-status role="status" aria-live="polite"></div>
+        </form>
+
+        <p class="auth-foot">Already have an account? <a href="login.html">Log in here</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <img src="Images/Logo-2.jpg" alt="Bainevier Plumbers & Contractors logo" width="120" height="46">
+        <p>Professional plumbing consultancy, system design, and tile fixing for residential, commercial, and industrial projects.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about_us.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact_us.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="tel:+256702714729"><i class="fa-solid fa-phone" aria-hidden="true"></i> 0702 714 729</a></li>
+          <li><a href="tel:+256771180443"><i class="fa-solid fa-phone" aria-hidden="true"></i> 0771 180 443</a></li>
+          <li><a href="https://wa.me/256702714729" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Chat on WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Bainevier Plumbers &amp; Contractors. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/256702714729" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>Chat on WhatsApp</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
